@@ -20,7 +20,7 @@ jobs:
 
       - name: Deploy to ECS
         run: |
-          ssh -o StrictHostKeyChecking=no root@3.26.223.52 << 'EOF'
+          ssh -o StrictHostKeyChecking=no ubuntu@3.26.223.52 << 'EOF'
             cd /var/www/html/web-company-profile
             git pull origin main
             sudo systemctl restart nginx
